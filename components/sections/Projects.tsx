@@ -66,8 +66,8 @@ function ProjectCard({
 
       {/* Card body */}
       <div
+        className="p-6 sm:p-9"
         style={{
-          padding: "2.25rem",
           display: "flex",
           flexDirection: "column",
           height: "100%",

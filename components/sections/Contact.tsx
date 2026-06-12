@@ -201,11 +201,11 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
+            className="p-6 sm:p-9"
             style={{
               background: "rgba(255,255,255,0.03)",
               border: "1px solid rgba(255,255,255,0.08)",
               borderRadius: 20,
-              padding: "2.25rem",
             }}
           >
             {status === "success" ? (

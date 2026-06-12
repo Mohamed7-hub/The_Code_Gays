@@ -173,7 +173,7 @@ export default function Services() {
                       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                       style={{ overflow: "hidden" }}
                     >
-                      <div style={{ paddingBottom: "1.75rem", paddingLeft: "calc(28px + 36px + 3rem)" }}>
+                      <div className="pb-7 pl-12 md:pl-28">
                         <p
                           style={{
                             color: "rgba(255,255,255,0.45)",
@@ -217,13 +217,12 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden p-6 sm:py-10 sm:px-12"
           style={{
             marginTop: "5rem",
             borderRadius: 16,
             border: "1px solid rgba(168,255,62,0.15)",
             background: "rgba(168,255,62,0.04)",
-            padding: "2.5rem 3rem",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",

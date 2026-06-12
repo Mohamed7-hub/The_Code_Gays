@@ -106,7 +106,7 @@ export default function Hero() {
         {/* Card 1 — Available status */}
         <FloatingCard
           delay={1.4}
-          className="top-[22%] right-[4%] w-[190px] p-4"
+          className="top-[22%] right-[4%] w-[190px] p-4 hidden md:block"
         >
           <div className="flex items-center gap-2 mb-2">
             <div className="w-2 h-2 rounded-full bg-[#a8ff3e] animate-pulse" />
@@ -120,7 +120,7 @@ export default function Hero() {
         {/* Card 2 — Latest build progress */}
         <FloatingCard
           delay={1.6}
-          className="bottom-[25%] right-[4%] w-[210px] p-5"
+          className="bottom-[25%] right-[4%] w-[210px] p-5 hidden md:block"
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-8 rounded-lg bg-[#a8ff3e]/15 border border-[#a8ff3e]/20 flex items-center justify-center">
@@ -253,8 +253,8 @@ export default function Hero() {
         {/* Stats bar */}
         <div
           ref={statsRef}
-          className="flex items-center flex-wrap"
-          style={{ opacity: 0, gap: "4rem", paddingTop: "3rem", borderTop: "1px solid rgba(255,255,255,0.06)" }}
+          className="grid grid-cols-2 md:flex md:items-center flex-wrap gap-x-8 gap-y-6 md:gap-16"
+          style={{ opacity: 0, paddingTop: "3rem", borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           {[
             { value: "2",    label: "Developers" },
@@ -279,7 +279,7 @@ export default function Hero() {
                 </p>
               </div>
               {i < 3 && (
-                <div style={{ width: "1px", height: "3rem", background: "rgba(255,255,255,0.06)" }} />
+                <div className="hidden md:block" style={{ width: "1px", height: "3rem", background: "rgba(255,255,255,0.06)" }} />
               )}
             </div>
           ))}

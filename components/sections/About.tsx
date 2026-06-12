@@ -35,8 +35,7 @@ function TeamCard({ member, index }: { member: (typeof TEAM)[0]; index: number }
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -6 }}
-      className="card-premium group relative overflow-hidden"
-      style={{ padding: "2rem" }}
+      className="card-premium group relative overflow-hidden p-6 sm:p-8"
     >
       {/* Subtle hover glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#a8ff3e]/0 to-[#a8ff3e]/0 group-hover:from-[#a8ff3e]/4 group-hover:to-transparent transition-all duration-700 rounded-2xl pointer-events-none" />
@@ -139,8 +138,7 @@ export default function About() {
           <span>About us</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-start"
-          style={{ gap: "5rem" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12 lg:gap-20">
 
           {/* ── Left column ── */}
           <div>
@@ -172,7 +170,7 @@ export default function About() {
             </p>
 
             {/* Trait pills */}
-            <div className="grid grid-cols-2 gap-3"
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"
               style={{ marginBottom: "3rem" }}>
               {[
                 { icon: "⚡", label: "Fast delivery",     iconBg: "rgba(234,179,8,0.15)"   },
@@ -219,8 +217,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="card-premium border-l-2 border-l-[#a8ff3e]"
-              style={{ padding: "2rem" }}
+              className="card-premium border-l-2 border-l-[#a8ff3e] p-6 sm:p-8"
             >
               <p className="text-white/55 text-base leading-relaxed italic">
                 &quot;We&apos;re still early in our journey, but we build with the

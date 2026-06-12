@@ -217,12 +217,11 @@ function BentoCard({ card, index }: { card: (typeof BENTO_DATA)[0]; index: numbe
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative overflow-hidden flex flex-col"
+      className="relative overflow-hidden flex flex-col p-5 sm:p-6"
       style={{
         background: "rgba(255,255,255,0.03)",
         border: `1px solid ${hovered ? card.color + "30" : "rgba(255,255,255,0.07)"}`,
         borderRadius: 16,
-        padding: "1.5rem",
         transition: "border-color 0.3s, box-shadow 0.3s",
         boxShadow: hovered ? `0 0 40px ${card.color}10` : "none",
         minHeight: card.layout === "logo-grid" ? 220 : card.layout === "progress" && card.techs.length > 3 ? 200 : 160,
@@ -365,37 +364,29 @@ export default function Skills() {
         </motion.p>
 
         {/* Bento Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridTemplateRows: "auto auto auto",
-            gap: "1rem",
-          }}
-          className="lg:grid"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Frontend — wide left */}
-          <div style={{ gridColumn: "1", gridRow: "1" }}>
+          <div className="lg:col-start-1 lg:row-start-1">
             <BentoCard card={BENTO_DATA[0]} index={0} />
           </div>
 
           {/* Backend — tall right (spans 2 rows) */}
-          <div style={{ gridColumn: "2", gridRow: "1 / 3" }}>
+          <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2">
             <BentoCard card={BENTO_DATA[1]} index={1} />
           </div>
 
           {/* Data & Cloud — wide left row 2 */}
-          <div style={{ gridColumn: "1", gridRow: "2" }}>
+          <div className="lg:col-start-1 lg:row-start-2">
             <BentoCard card={BENTO_DATA[2]} index={2} />
           </div>
 
           {/* Mobile — right row 3 */}
-          <div style={{ gridColumn: "2", gridRow: "3" }}>
+          <div className="lg:col-start-2 lg:row-start-3">
             <BentoCard card={BENTO_DATA[3]} index={3} />
           </div>
 
-          {/* Design — left row 3 */}
-          <div style={{ gridColumn: "1", gridRow: "3", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+          {/* Design & DevOps — left row 3 */}
+          <div className="lg:col-start-1 lg:row-start-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <BentoCard card={BENTO_DATA[4]} index={4} />
             <BentoCard card={BENTO_DATA[5]} index={5} />
           </div>
